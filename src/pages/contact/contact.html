@@ -1,20 +1,49 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Contato
-    </ion-title>
+    <ion-title>Contato</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Siga-nos no Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="mail" md="md-mail"></ion-icon>
-      <!-- @ionicframework -->
-    </ion-item>
-    <ion-item>
-      <ion-input type="email" [(ngModel)]="sDefaultEmail" value="sDefaultEmail.value"></ion-input>
-    </ion-item>
-  </ion-list>
+<ion-content class=" cards-bg">
+
+  <ion-card class="cards-list-demo">
+    <!-- <ion-card-header>
+      Explore Nearby
+    </ion-card-header> -->
+
+    <ion-list>
+      <button ion-item>
+        <ion-icon name='mail' item-start></ion-icon>
+        <h2>{{ sDefaultEmail }}</h2>
+        <!-- <ion- type="email" [(ngModel)]="sDefaultEmail" value="sDefaultEmail.value"></ion-input> -->
+      </button>
+
+      <!-- <button ion-item>
+        <ion-icon name='medical' item-start></ion-icon>
+        Hospital
+      </button>
+
+      <button ion-item>
+        <ion-icon name='cafe' item-start></ion-icon>
+        Cafe
+      </button>
+
+      <button ion-item>
+        <ion-icon name='paw' item-start></ion-icon>
+        Dog Park
+      </button>
+
+      <button ion-item>
+        <ion-icon name='beer' item-start></ion-icon>
+        Pub
+      </button>
+
+      <button ion-item>
+        <ion-icon name='planet' item-start></ion-icon>
+        Space
+      </button> -->
+
+    </ion-list>
+  </ion-card>
+
 </ion-content>
