@@ -1,3 +1,6 @@
+import { TentativasPage } from './../pages/tentativas/tentativas';
+import { ProgressoPage } from './../pages/progresso/progresso';
+import { PainelPage } from './../pages/painel/painel';
 import { NgModule, ErrorHandler, Injectable, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -12,6 +15,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { TopoPage } from '../pages/topo/topo';
 
 Pro.init('0364cc70', {
   appVersion: '0.0.1'
@@ -44,7 +48,11 @@ export class MyErrorHandler implements ErrorHandler {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    TopoPage,
+    PainelPage,
+    ProgressoPage,
+    TentativasPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +64,11 @@ export class MyErrorHandler implements ErrorHandler {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    TopoPage,
+    PainelPage,
+    ProgressoPage,
+    TentativasPage
   ],
   providers: [
     StatusBar,

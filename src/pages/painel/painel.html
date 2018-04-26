@@ -1,0 +1,16 @@
+<page-progresso [progresso]="progresso"></page-progresso>
+    <page-tentativas class="tentativas" [tentativas]="tentativas"></page-tentativas>
+<br>
+<p>
+  {{ instrucao }}
+</p>
+<ion-card style="text-align: center; padding: 2px; font-size: 16px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+    {{rodadaFrase.fraseEng}}
+</ion-card>
+<ion-item>
+  <!-- <ion-label>Username</ion-label> -->
+  <ion-input type="text" (input)="atualizaResposta($event)" [value]="resposta" autofocus (keypress)="($event.which === 13)?verificarResposta():0"></ion-input>
+</ion-item>
+<ion-buttons end>
+  <button ion-button item-end (click)="verificarResposta()">Verificar</button>
+</ion-buttons>

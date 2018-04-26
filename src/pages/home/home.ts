@@ -7,8 +7,18 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  public jogoEmAndamento: boolean = true
+  public vitoria: boolean
 
+  public encerrarJogo(vitoria: boolean): void {
+    //console.log(tipo)
+    this.jogoEmAndamento = false
+    this.vitoria = vitoria
+  }
+
+  public reiniciarJogo(): void {
+    this.jogoEmAndamento = true
+    this.vitoria = undefined
   }
  
 }

@@ -5,25 +5,32 @@
 </ion-header>
 
 <ion-content padding>
-  <!-- <h2>Bem vindo!</h2> -->
-  <ion-card>
-    <ion-card-header style="color: white; background-color: darkcyan">
-      Vamos aprender inglês?
-    </ion-card-header>
-  </ion-card>
-  <p>
-    Traduza a frase:
-  </p>
-  <p>
-    I like to learn
-  </p>
-  <ion-item>
-    <!-- <ion-label>Username</ion-label> -->
-    <ion-input type="text" value=""></ion-input>
-    
-  </ion-item>
-  <ion-buttons end>
-    <button ion-button item-end>Verificar</button>
-    </ion-buttons>
+  <page-topo></page-topo>
+  <div *ngIf="jogoEmAndamento; else fimDeJogo ">
+    <page-painel (encerrarJogo)="encerrarJogo($event)"></page-painel>
+  </div>
+  <ng-template #fimDeJogo>
+    <div *ngIf="vitoria; else exibeDerrota " class="container">
+      <ion-item style="text-align: center; vertical-align: middle; height: 60px; padding: 2px; font-size: 16px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+        <p>
+          <ion-icon name="md-close-circle" ></ion-icon>
+          <strong>Fim de Jogo!</strong> Você ganhou. Parabêns!!!
+        </p>
+      </ion-item>              
+      <ion-buttons end>
+        <button ion-button item-end (click)="reiniciarJogo()">Jogar novamente</button>
+      </ion-buttons>
+    </div>
+  </ng-template>
+  <ng-template #exibeDerrota>
+      <ion-item style="text-align: center; vertical-align: middle; height: 60px; padding: 2px; font-size: 16px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+        <p>
+          <ion-icon name="md-close-circle" ></ion-icon>
+          <strong>Fim de Jogo!</strong> Infelizmente você perdeu.
+        </p>
+      </ion-item>              
+      <ion-buttons end>
+        <button ion-button item-end (click)="reiniciarJogo()">Jogar novamente</button>
+      </ion-buttons>
+  </ng-template>
   </ion-content>
-
