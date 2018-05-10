@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+//import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+  constructor(){
+
+  }
 
   public jogoEmAndamento: boolean = true
   public vitoria: boolean

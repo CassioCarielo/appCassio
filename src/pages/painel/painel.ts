@@ -1,10 +1,9 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { IonicPage, AlertController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 import { Frase } from '../../shared/frase.model'
 import { FRASES } from './frases-mock'
 
-@IonicPage()
 @Component({
   selector: 'page-painel',
   templateUrl: 'painel.html',

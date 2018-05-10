@@ -1,3 +1,5 @@
+import { ProgressBarModule } from 'angular-progress-bar';
+import { CadPerguntasPage } from './../pages/cad-perguntas/cad-perguntas';
 import { TentativasPage } from './../pages/tentativas/tentativas';
 import { ProgressoPage } from './../pages/progresso/progresso';
 import { PainelPage } from './../pages/painel/painel';
@@ -52,11 +54,13 @@ export class MyErrorHandler implements ErrorHandler {
     TopoPage,
     PainelPage,
     ProgressoPage,
-    TentativasPage
+    TentativasPage,
+    CadPerguntasPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ProgressBarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -68,7 +72,8 @@ export class MyErrorHandler implements ErrorHandler {
     TopoPage,
     PainelPage,
     ProgressoPage,
-    TentativasPage
+    TentativasPage,
+    CadPerguntasPage
   ],
   providers: [
     StatusBar,

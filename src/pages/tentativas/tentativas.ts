@@ -1,8 +1,8 @@
 import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { Coracao } from '../../shared/coracao.model'
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+//import { IonicPage } from 'ionic-angular';
+//import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-tentativas',
   templateUrl: 'tentativas.html',
